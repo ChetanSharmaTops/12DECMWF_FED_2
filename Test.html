@@ -6,17 +6,82 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
    <style>
-      .container{
-         width: 1100px;
-         margin: 0 auto;
+      *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
          text-align: center;
+      }
+      body{
+         background-color: crimson;
+         color: aliceblue;
+
+      }
+      .container{
+         width: 90%;
+         margin: 0 auto;
+      }
+      .row{
+         display: flex;
+         justify-content: space-between;
+         gap: 20px;
+
+      }
+      .col-33{
+         width: 33.33%;
+      }
+      img{
+         width: 100%;
+      }
+      .main-text{
+         text-align: center;
+         padding: 50px 0px;
+      }
+      .wrap{
+         border: 1px solid white;
+         background-color: teal;
+         color: khaki;
       }
    </style>
 </head>
 <body>
    <div class="container">
-      <h1>Heading</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, nihil!</p>
+      <div class="main-text">
+         <h1>Slot</h1>
+      </div>
+      <div class="row">
+         <div class="col-33">
+            <div class="slot">
+               <img src="Images/banner2.jpg" alt="">
+              <div class="wrap">
+               <h2>Timing</h2>
+               <button>Veg</button>
+               <button>Non-Veg</button>
+              </div>
+            </div>
+         </div>
+         <div class="col-33">
+            <div class="slot">
+               <img src="Images/banner2.jpg" alt="">
+              <div class="wrap">
+               <h2>Timing</h2>
+               <button>Veg</button>
+               <button>Non-Veg</button>
+              </div>
+            </div>
+         </div>
+         <div class="col-33">
+            <div class="slot">
+               <img src="Images/banner2.jpg" alt="">
+              <div class="wrap">
+               <h2>Timing</h2>
+               <button>Veg</button>
+               <button>Non-Veg</button>
+              </div>
+            </div>
+         </div>
+         
+      </div>
    </div>
 </body>
 </html>
