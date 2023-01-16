@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: 1px solid black;
+      }
+      .margin {
+        background-color: teal;
+        color: khaki;
+        margin: 100px; /* All four direction */
+        margin: 100px 200px; /* first value => top and bottom direction, Second value => right and left direction */
+        margin: 100px 200px 300px; /* first value => top direction, Second value => right and left direction, third value => bottom direction */
+        margin: 100px 200px 300px 400px; /* first value => top direction, Second value => right direction, third value => bottom direction, fourth value => left direction */
+      }
+      .padding {
+        background-color: khaki;
+        color: teal;
+        padding: 100px;
+        padding: 100px 200px;
+        padding: 100px 200px 300px;
+        padding: 100px 200px 300px 400px;
+      }
+
+      /* box sizing  */
+
+      div[class*='box'] {
+        width: 160px;
+        height: 80px;
+        padding: 20px;
+        border: 8px solid rgb(0, 17, 255);
+        background: rgb(255, 0, 43);
+      }
+
+      .content-box {
+        box-sizing: content-box;
+        /* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px
+     Total height: 80px + (2 * 20px) + (2 * 8px) = 136px
+     Content box width: 160px
+     Content box height: 80px */
+      }
+
+      .border-box {
+        box-sizing: border-box;
+        /* box-sizing: content-box; */
+        /* Total width: 160px
+     Total height: 80px
+     Content box width: 160px - (2 * 20px) - (2 * 8px) = 104px
+     Content box height: 80px - (2 * 20px) - (2 * 8px) = 24px */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="margin">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+      incidunt consequuntur illum eveniet. Eius consectetur ipsa cupiditate, ea
+      nostrum libero nulla eaque, ipsam doloribus aperiam repellendus corrupti.
+      Totam, dignissimos enim.
+    </div>
+    <hr />
+    <div class="padding">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+      incidunt consequuntur illum eveniet. Eius consectetur ipsa cupiditate, ea
+      nostrum libero nulla eaque, ipsam doloribus aperiam repellendus corrupti.
+      Totam, dignissimos enim.
+    </div>
+    <hr />
+    <div class="content-box">Content box</div>
+    <hr />
+    <div class="border-box">Border box</div>
+  </body>
+</html>
